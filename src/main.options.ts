@@ -9,3 +9,8 @@ export const OPTIONS: NestMicroserviceOptions & MicroserviceOptions = {
     transport: Transport.TCP,
     options: {port, host},
 };
+
+export interface Options {
+    port: number;
+    host: string;
+}
