@@ -43,11 +43,11 @@ podTemplate(
                 IMAGE_POSFIX = "-RC"
                 NODE_PORT = "30011"
                 echo "Ambiente development"
-                echo "CURRENT BRANCH ${GIT_BRANCH}"
             } else {
                 echo "Não existe pipeline para a branch ${GIT_BRANCH}"
                 exit 0
             }
+            echo "CURRENT BRANCH ${GIT_BRANCH}"
             sh "ls -ltra"
             DOCKER_IMAGE_VERSION = sh label: 'get version', returnStdout: true, script: 'sh read-package-json-version.sh'
             DOCKER_IMAGE_VERSION = DOCKER_IMAGE_VERSION.trim() + IMAGE_POSFIX
