@@ -41,7 +41,7 @@ podTemplate(
                 ENVIRONMENT = 'development'
                 HELM_DEPLOY_NAME = ENVIRONMENT + "-" + MICROSERVICE_NAME
                 IMAGE_POSFIX = "-RC"
-                NODE_PORT = "30011"
+                NODE_PORT = "30012"
                 echo "Ambiente development"
             } else {
                 echo "Não existe pipeline para a branch ${GIT_BRANCH}"
