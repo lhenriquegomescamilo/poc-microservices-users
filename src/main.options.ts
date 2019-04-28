@@ -3,7 +3,7 @@ import {MicroserviceOptions} from '@nestjs/common/interfaces/microservices/micro
 import {Transport} from '@nestjs/common/enums/transport.enum';
 
 const host = (process.env.URL_MICROSERVICE_USER || 'localhost') as string;
-const port = (process.env.PORT_MICROSERVICE_USER || 3002) as number;
+const port = 3002 as number;
 
 export const OPTIONS: NestMicroserviceOptions & MicroserviceOptions = {
     transport: Transport.TCP,
