@@ -20,6 +20,7 @@ export class AppController {
 
     @MessagePattern({cmd: 'findAll'})
     public findAll(data: string): Observable<UserDto[]> {
+        console.log('run find all ', data);
         return this.databaseMicroservice.send({cmd: 'findAll'}, data);
     }
 }
